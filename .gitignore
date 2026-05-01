@@ -221,3 +221,6 @@ chatgpt*
 # Archives
 *.zip
 *.tar.gz
+# CIFAR-10 dataset (large, download separately)
+LLM Architecture/Homework_2/data/cifar-10-batches-py/
+LLM Architecture/Homework_2/data/cifar-10-python.tar.gz
