@@ -1,0 +1,50 @@
+{
+  "timestamp": "2026-04-01T14:07:36.705875",
+  "device": "cuda",
+  "location": "Sydney",
+  "seq_len": 30,
+  "train_size": 2673,
+  "val_size": 669,
+  "models": {
+    "Naive": {
+      "MAE": 2.5945226917057904,
+      "RMSE": 3.774685054590098,
+      "config": {
+        "param_count": 0
+      }
+    },
+    "LSTM": {
+      "MAE": 2.2219291125851246,
+      "RMSE": 3.182833180431676,
+      "config": {
+        "hidden_size": 64,
+        "num_layers": 1,
+        "epochs": 200,
+        "lr": 0.001,
+        "batch_mode": "full",
+        "param_count": 17217
+      }
+    },
+    "N-BEATS": {
+      "MAE": 2.179104914239874,
+      "RMSE": 3.1513517434813005,
+      "config": {
+        "max_steps": 200,
+        "stack_types": [
+          "identity",
+          "identity"
+        ],
+        "param_count": 1639486
+      }
+    },
+    "Toto": {
+      "MAE": 2.563356632581899,
+      "RMSE": 4.24219529633387,
+      "config": {
+        "model_id": "Datadog/Toto-Open-Base-1.0",
+        "zero_shot": true,
+        "param_count": 151306080
+      }
+    }
+  }
+}

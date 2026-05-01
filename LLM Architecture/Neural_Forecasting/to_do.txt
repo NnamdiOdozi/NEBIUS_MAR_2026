@@ -1,0 +1,16 @@
+Use this guide to do finetuning of the Toto model:
+
+https://github.com/DataDog/toto/blob/main/toto/notebooks/finetuning_tutorial.ipynb
+
+ok so i want to add a measure of dropout to the data. would i then need to divide data into train, val, and test. that  
+  way the val set is used for hyperparameter tuning. i have plans to use the Optuna library to do hyper-parameter tuning
+
+Adding covariates to the inputs
+
+Explore this rolling window idea
+
+Other models
+Deep AR
+Chronos
+Moirai
+Patch TFT or TST by Nixtla

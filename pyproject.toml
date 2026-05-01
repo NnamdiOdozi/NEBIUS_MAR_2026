@@ -1,0 +1,35 @@
+[project]
+name = "nebius-mar-2026"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = "==3.12.*"
+dependencies = [
+    "datasets",
+    "matplotlib",
+    "numpy",
+    "pandas<3.0",
+    "scikit-learn",
+    "seaborn",
+    "torch==2.7.0",
+    "torchvision==0.22.0",
+    "tqdm",
+    "ipykernel",
+    "gdown>=5.2.1",
+    "neuralforecast",
+    "toto-ts",
+    "setuptools>=75.0,<82",
+    "lightgbm",
+]
+
+[[tool.uv.index]]
+name = "pytorch-cu128"
+url = "https://download.pytorch.org/whl/cu128"
+explicit = true
+
+[tool.uv]
+environments = ["sys_platform == 'linux'"]
+
+[tool.uv.sources]
+torch = { index = "pytorch-cu128" }
+torchvision = { index = "pytorch-cu128" }

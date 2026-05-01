@@ -1,0 +1,41 @@
+{
+  "timestamp": "2026-04-01T14:51:49.677563",
+  "device": "cuda",
+  "location": "Sydney",
+  "seq_len": 30,
+  "train_size": 2673,
+  "val_size": 669,
+  "models": {
+    "Naive": {
+      "MAE": 2.5945226917057904,
+      "RMSE": 3.774685054590098,
+      "config": {
+        "param_count": 0
+      }
+    },
+    "LSTM": {
+      "MAE": 2.1584268572931182,
+      "RMSE": 3.092434116563788,
+      "config": {
+        "hidden_size": 64,
+        "num_layers": 2,
+        "epochs": 300,
+        "lr": 0.001,
+        "batch_mode": "full",
+        "param_count": 50497
+      }
+    },
+    "N-BEATS": {
+      "MAE": 2.1955274292374254,
+      "RMSE": 3.149636886812159,
+      "config": {
+        "max_steps": 300,
+        "stack_types": [
+          "identity",
+          "identity"
+        ],
+        "param_count": 1639486
+      }
+    }
+  }
+}

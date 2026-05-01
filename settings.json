@@ -1,0 +1,388 @@
+{
+  "env": {
+    "PATH": "/home/nodozi/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:$PATH",
+    "EDITOR": "nano",
+    "VISUAL": "nano"
+  },
+  "permissions": {
+    "allow": [
+      "Bash(cd:*)",
+      "Bash(ls:*)",
+      "Bash(cat:*)",
+      "Bash(echo:*)",
+      "Bash(cp:*)",
+      "Bash(open:*)",
+      "Bash(grep:*)",
+      "Bash(chmod:*)",
+      "Bash(file:*)",
+      "Bash(head:*)",
+      "Bash(tail:*)",
+      "Bash(pwd:*)",
+      "Bash(mkdir:*)",
+      "Bash(wc:*)",
+      "Bash(which:*)",
+      "Bash(touch:*)",
+      "Bash(diff:*)",
+      "Bash(test:*)",
+      "Bash(set:*)",
+      "Bash(sh -c 'cd:*)",
+      "Bash(sh -c 'ls:*)",
+      "Bash(sh -c 'cat:*)",
+      "Bash(sh -c 'echo:*)",
+      "Bash(sh -c 'cp:*)",
+      "Bash(sh -c 'open:*)",
+      "Bash(sh -c 'grep:*)",
+      "Bash(sh -c 'chmod:*)",
+      "Bash(sh -c 'file:*)",
+      "Bash(sh -c 'head:*)",
+      "Bash(sh -c 'tail:*)",
+      "Bash(sh -c 'pwd:*)",
+      "Bash(sh -c 'mkdir:*)",
+      "Bash(sh -c 'wc:*)",
+      "Bash(sh -c 'which:*)",
+      "Bash(sh -c 'touch:*)",
+      "Bash(sh -c 'diff:*)",
+      "Bash(sh -c 'test:*)",
+      "Bash(sh -c 'set:*)",
+      "Bash(source:*)",
+      "Bash(python:*)",
+      "Bash(python3:*)",
+      "Bash(.venv/bin/python:*)",
+      "Bash(.venv/bin/activate:*)",
+      "Read(/home/nodozi/projects/**)"
+    ],
+    "deny": [],
+    "ask": [],
+    "defaultMode": "bypassPermissions"
+  },
+  "enabledPlugins": {
+    "document-skills@anthropic-agent-skills": true,
+    "pyright-lsp@claude-plugins-official": true,
+    "code-simplifier@claude-plugins-official": true
+  },
+  "skipDangerousModePermissionPrompt": true,
+  "mcpServers": {
+    "github": {
+      "type": "stdio",
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-github"
+      ],
+      "env": {
+        "GITHUB_PERSONAL_ACCESS_TOKEN": "${GITHUB_PERSONAL_ACCESS_TOKEN}"
+      }
+    },
+    "markitdown": {
+      "type": "stdio",
+      "command": "uvx",
+      "args": [
+        "markitdown-mcp==0.0.1a4"
+      ]
+    },
+    "playwright": {
+      "type": "stdio",
+      "command": "npx",
+      "args": [
+        "@playwright/mcp@latest"
+      ]
+    },
+    "zapier": {
+      "type": "http",
+      "url": "{zapier_mcp_url}"
+    },
+    "filesystem": {
+      "type": "stdio",
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-filesystem@latest",
+        "/home/nodozi/projects"
+      ]
+    },
+    "context7": {
+      "type": "stdio",
+      "command": "npx",
+      "args": [
+        "-y",
+        "@upstash/context7-mcp"
+      ]
+    },
+    "arxiv": {
+      "type": "stdio",
+      "command": "uvx",
+      "args": [
+        "arxiv-mcp-server"
+      ]
+    },
+    "leann-server": {
+      "type": "stdio",
+      "command": "leann_mcp",
+      "args": []
+    }
+  },
+  "allowedPrompts": [
+    {
+      "tool": "Bash",
+      "prompt": "list directory contents"
+    },
+    {
+      "tool": "Bash",
+      "prompt": "change directory"
+    },
+    {
+      "tool": "Bash",
+      "prompt": "copy files"
+    },
+    {
+      "tool": "Bash",
+      "prompt": "read file contents"
+    },
+    {
+      "tool": "Bash",
+      "prompt": "open file"
+    },
+    {
+      "tool": "Bash",
+      "prompt": "echo text output"
+    },
+    {
+      "tool": "Bash",
+      "prompt": "search text in files"
+    },
+    {
+      "tool": "Bash",
+      "prompt": "change file permissions"
+    },
+    {
+      "tool": "WebFetch",
+      "prompt": "fetch from github"
+    },
+    {
+      "tool": "WebFetch",
+      "prompt": "fetch from huggingface"
+    },
+    {
+      "tool": "WebFetch",
+      "prompt": "fetch from arxiv"
+    },
+    {
+      "tool": "WebFetch",
+      "prompt": "fetch from pypi"
+    },
+    {
+      "tool": "WebFetch",
+      "prompt": "fetch from pytorch docs"
+    },
+    {
+      "tool": "WebFetch",
+      "prompt": "fetch from tensorflow docs"
+    },
+    {
+      "tool": "WebFetch",
+      "prompt": "fetch from mlir docs"
+    },
+    {
+      "tool": "Read",
+      "prompt": "read files"
+    },
+    {
+      "tool": "sh",
+      "prompt": "list directory contents"
+    },
+    {
+      "tool": "sh",
+      "prompt": "change directory"
+    },
+    {
+      "tool": "sh",
+      "prompt": "copy files"
+    },
+    {
+      "tool": "sh",
+      "prompt": "read file contents"
+    },
+    {
+      "tool": "sh",
+      "prompt": "open file"
+    },
+    {
+      "tool": "sh",
+      "prompt": "echo text output"
+    },
+    {
+      "tool": "sh",
+      "prompt": "search text in files"
+    },
+    {
+      "tool": "sh",
+      "prompt": "change file permissions"
+    },
+    {
+      "tool": "Bash",
+      "prompt": "list running processes"
+    },
+    {
+      "tool": "Bash",
+      "prompt": "inspect process details"
+    },
+    {
+      "tool": "Bash",
+      "prompt": "find files"
+    },
+    {
+      "tool": "Bash",
+      "prompt": "search for files"
+    },
+    {
+      "tool": "Bash",
+      "prompt": "check git status"
+    },
+    {
+      "tool": "Bash",
+      "prompt": "view git log"
+    },
+    {
+      "tool": "Bash",
+      "prompt": "view git diff"
+    },
+    {
+      "tool": "Bash",
+      "prompt": "check git remote"
+    },
+    {
+      "tool": "Bash",
+      "prompt": "configure git identity"
+    },
+    {
+      "tool": "Bash",
+      "prompt": "create git commits"
+    },
+    {
+      "tool": "Bash",
+      "prompt": "push to git remote"
+    },
+    {
+      "tool": "Bash",
+      "prompt": "configure git remote"
+    },
+    {
+      "tool": "Bash",
+      "prompt": "call GitHub API"
+    },
+    {
+      "tool": "Bash",
+      "prompt": "allow direnv"
+    },
+    {
+      "tool": "Bash",
+      "prompt": "source environment file"
+    },
+    {
+      "tool": "Bash",
+      "prompt": "list uv tools"
+    },
+    {
+      "tool": "Bash",
+      "prompt": "install uv tools"
+    },
+    {
+      "tool": "sh",
+      "prompt": "list running processes"
+    },
+    {
+      "tool": "sh",
+      "prompt": "inspect process details"
+    },
+    {
+      "tool": "sh",
+      "prompt": "find files"
+    },
+    {
+      "tool": "sh",
+      "prompt": "search for files"
+    },
+    {
+      "tool": "sh",
+      "prompt": "check git status"
+    },
+    {
+      "tool": "sh",
+      "prompt": "view git log"
+    },
+    {
+      "tool": "sh",
+      "prompt": "view git diff"
+    },
+    {
+      "tool": "sh",
+      "prompt": "check git remote"
+    },
+    {
+      "tool": "sh",
+      "prompt": "configure git identity"
+    },
+    {
+      "tool": "sh",
+      "prompt": "create git commits"
+    },
+    {
+      "tool": "sh",
+      "prompt": "push to git remote"
+    },
+    {
+      "tool": "sh",
+      "prompt": "configure git remote"
+    },
+    {
+      "tool": "sh",
+      "prompt": "call GitHub API"
+    },
+    {
+      "tool": "sh",
+      "prompt": "allow direnv"
+    },
+    {
+      "tool": "sh",
+      "prompt": "source environment file"
+    },
+    {
+      "tool": "sh",
+      "prompt": "list uv tools"
+    },
+    {
+      "tool": "sh",
+      "prompt": "install uv tools"
+    },
+    {
+      "tool": "Bash",
+      "prompt": "activate virtual environment"
+    },
+    {
+      "tool": "Bash",
+      "prompt": "run Python scripts"
+    },
+    {
+      "tool": "Bash",
+      "prompt": "execute Python code"
+    },
+    {
+      "tool": "sh",
+      "prompt": "activate virtual environment"
+    },
+    {
+      "tool": "sh",
+      "prompt": "run Python scripts"
+    },
+    {
+      "tool": "sh",
+      "prompt": "execute Python code"
+    }
+  ],
+  "skipPermissionsOption": true,
+  "effortLevel": "medium",
+  "statusLine": {
+    "type": "command",
+    "command": "bash /home/nodozi/.claude/statusline-command.sh"
+  }
+}

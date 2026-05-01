@@ -1,0 +1,20 @@
+{
+  "timestamp": "2026-04-05T12:23:47.381042",
+  "device": "cuda",
+  "location": "Sydney",
+  "seq_len": 30,
+  "train_size": 2673,
+  "val_size": 669,
+  "models": {
+    "LightGBM": {
+      "MAE": 2.2853995468440713,
+      "RMSE": 3.2372007529632323,
+      "config": {
+        "n_estimators": 300,
+        "learning_rate": 0.05,
+        "num_leaves": 31,
+        "param_count": 9300
+      }
+    }
+  }
+}

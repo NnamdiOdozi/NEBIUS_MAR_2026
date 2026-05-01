@@ -1,0 +1,37 @@
+{
+  "timestamp": "2026-03-31T20:59:17.721672",
+  "device": "cuda",
+  "location": "Sydney",
+  "seq_len": 30,
+  "train_size": 2673,
+  "val_size": 669,
+  "models": {
+    "LSTM": {
+      "MAE": 2.3641379522046013,
+      "RMSE": 3.3834370486572816,
+      "config": {
+        "hidden_size": 64,
+        "num_layers": 1,
+        "epochs": 50,
+        "lr": 0.001,
+        "batch_mode": "full"
+      }
+    },
+    "N-BEATS": {
+      "MAE": 2.179104914239874,
+      "RMSE": 3.1513517434813005,
+      "config": {
+        "max_steps": 200,
+        "stack_types": ["identity", "identity"]
+      }
+    },
+    "Toto": {
+      "MAE": 2.563356632581899,
+      "RMSE": 4.24219529633387,
+      "config": {
+        "model_id": "Datadog/Toto-Open-Base-1.0",
+        "zero_shot": true
+      }
+    }
+  }
+}
