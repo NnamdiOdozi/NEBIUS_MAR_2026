@@ -1,0 +1,3 @@
+[submodule "AI_Agents/sovereign-agent-lab"]
+	path = AI_Agents/sovereign-agent-lab
+	url = https://github.com/NnamdiOdozi/sovereign-agent-lab
